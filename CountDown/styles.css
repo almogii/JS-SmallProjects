@@ -1,0 +1,52 @@
+.date {
+    color: var(--clr-grey-5);
+    font-size: 0.85rem;
+  }
+  @media screen and (min-width: 992px) {
+    .section-center {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      place-items: center;
+      gap: 3rem;
+      width: 95vw;
+    }
+}
+  .deadline {
+    display: flex;
+  }
+  .deadline-format {
+    background: var(--clr-grey-1);
+    color: var(--clr-white);
+    margin-right: 1rem;
+    width: 5rem;
+    height: 5rem;
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+  .deadline-format section {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+  }
+  .deadline h3:not(.expired) {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+    letter-spacing: var(--spacing);
+  }
+  .section {
+    padding: 5rem 0;
+  }
+  .section-center {
+    width: 90vw;
+    margin: 5rem auto;
+    max-width: 1170px;
+  }
+
+  .product-img{
+  width: 50px;
+  max-width: 120px;
+  height: auto;  
+ 
+  }
