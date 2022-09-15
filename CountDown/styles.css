@@ -11,7 +11,7 @@
       width: 95vw;
     }
 }
-  .deadline {
+  .deadline  {
     display: flex;
   }
   .deadline-format {
@@ -43,10 +43,15 @@
     margin: 5rem auto;
     max-width: 1170px;
   }
-
   .product-img{
   width: 50px;
   max-width: 120px;
   height: auto;  
- 
+  }
+
+
+
+  .btn-click-to-buy {
+    width: 20px;
+   
   }
