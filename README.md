@@ -1,2 +1,1 @@
-# js projects for beginners
- 
+
