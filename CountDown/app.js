@@ -1,10 +1,10 @@
         //------dates functions-------
-//choosing random dates
+//generate random date
 function randomDate(start, end) {
  return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()))
 };
 const futureDate=randomDate(new Date(2022,9,10),new Date(2023,1,1));
-//print expire date to the screen :
+//presents expire date to the screen :
 const year=futureDate.getFullYear();
 const month=String(futureDate.getMonth() + 1).padStart(2, '0');
 const day=String(futureDate.getDate()).padStart(2, '0');
@@ -12,16 +12,13 @@ document.querySelector(".expire-date").innerHTML=`the sale will begin at :${ day
 //counting down func:
 const countDown=()=>{
     const today= new Date().getTime();
-    //  const counter=futureDate.getTime()-today;
-    const counter=futureDate-today;
+  const counter=futureDate.getTime()-today;
          if(counter<0){
          clearInterval(x);
         }
         if(counter===0){
-            b();
-            //  ShowBth(); 
+           cat_btn();
             clearInterval(x);
-            // removeAttr();
         }
     //convert into year month hour from mil sec to "normal"
     const second=1000;
@@ -38,7 +35,6 @@ const countDown=()=>{
    document.querySelector('#hours').innerHTML=hourcounter;
    document.querySelector('#minutes').innerHTML=minutecounter;
    document.querySelector('#seconds').innerHTML=secoundcounter;
-
 };
 
 //runs count func within 1 sec
@@ -48,26 +44,23 @@ countDown();
     //-----------images-----------------
 const images=new Array(20);         
 //function that puts the pictures into an fixed array maybe dosent needed! 
-let a =()=>{
+const put_pic_into_arr =()=>{
    for(let i=0;i<images.length;i++){
     j=i+1;
     images[i]=`images/p${j}`;
    }   
 };
-a();
+put_pic_into_arr();
 console.log(images);
-//random picture choosing
+//random picture choosing:
 const imgAt=()=>{
 var index=Math.ceil(Math.random()*20);
-
    let htmltag=`<img src="/images/p${index}.jpg">`;
-   console.log(htmltag);
-
-    document.querySelector('.product-img').innerHTML=htmltag;
+document.querySelector('.product-img').innerHTML=htmltag;
 }
 imgAt();
 //----------btn function------------------
-const b=()=>{
+const cat_btn=()=>{
 document.querySelector(".btn-click-to-buy").innerHTML=`<button type="button" class="btn btn-primary" onclick="ShowBth()">  the sale begins now
 </button>`;
 };
