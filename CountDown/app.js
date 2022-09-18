@@ -13,7 +13,7 @@ document.querySelector(".expire-date").innerHTML=`the sale will begin at :${ day
 const countDown=()=>{
     const today= new Date().getTime();
     //  const counter=futureDate.getTime()-today;
-    const counter=today-today;
+    const counter=futureDate-today;
          if(counter<0){
          clearInterval(x);
         }
@@ -34,12 +34,13 @@ const countDown=()=>{
     const minutecounter=Math.floor((counter%hour)/minute);
     const secoundcounter=Math.floor((counter%minute)/second);
    //to html file:
-   document.querySelector('.days').innerHTML=daycounter;
-   document.querySelector('.hours').innerHTML=hourcounter;
-   document.querySelector('.minutes').innerHTML=minutecounter;
-   document.querySelector('.seconds').innerHTML=secoundcounter;
-  
+   document.querySelector('#days').innerHTML=daycounter;
+   document.querySelector('#hours').innerHTML=hourcounter;
+   document.querySelector('#minutes').innerHTML=minutecounter;
+   document.querySelector('#seconds').innerHTML=secoundcounter;
+
 };
+
 //runs count func within 1 sec
 let x =setInterval(function(){
 countDown();
@@ -65,20 +66,18 @@ var index=Math.ceil(Math.random()*20);
     document.querySelector('.product-img').innerHTML=htmltag;
 }
 imgAt();
-
 //----------btn function------------------
 const b=()=>{
-document.querySelector(".btn-click-to-buy").innerHTML=`<button type="button" class="btn btn-outline-primary" onclick="ShowBth()">  the sale begins now
+document.querySelector(".btn-click-to-buy").innerHTML=`<button type="button" class="btn btn-primary" onclick="ShowBth()">  the sale begins now
 </button>`;
-
 };
-
 
 //when the counter is 0 0 0 0 the btn shows
  let hidden=true;
 const ShowBth=()=>{
     hidden=!hidden;
     if(hidden===false){
+     let a=document.querySelector('.btn-click-to-buy').innerHTML=`<button type="button" hidden="hidden"/>`
     paypal.Buttons({
         style : {
             size:'mini',
