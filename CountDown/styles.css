@@ -9,10 +9,9 @@ body{
   font-family: 'Ubuntu', sans-serif;
 }
 .center-class {
-font-family: 'Montserrat', sans-serif;
 font-family: 'Ubuntu', sans-serif;
   font-size: medium;
-  font-weight: lighter;
+  font-weight:200;
   margin: 0 auto;
   text-align: center;
 }
@@ -29,7 +28,6 @@ li {
   padding: 1em;
   text-transform: uppercase;
 }
-
 li span {
   display: block;
   font-size: 2.5rem;
@@ -39,22 +37,19 @@ li span {
   body {
     font-size: calc(1.5rem * var(--smaller));
   }
-  
+
   li {
     font-size: calc(1.125rem * var(--smaller));
   }
-  
   li span {
     font-size: calc(3.375rem * var(--smaller));
   }
 }
-
 .btn-click-to-buy{
-  font-size: large;
-}
-.btn.btn-primary{ 
-display: inline-block; 
+font-size: large;
 text-align: center;
-background-color: black;
 color: azure;
+word-spacing: normal;
+height: 100px !important;
 }
+ 

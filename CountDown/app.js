@@ -12,7 +12,8 @@ document.querySelector(".expire-date").innerHTML=`the sale will begin at :${ day
 //counting down func:
 const countDown=()=>{
     const today= new Date().getTime();
-  const counter=futureDate.getTime()-today;
+    const counter=today-today;
+//   const counter=futureDate.getTime()-today;
          if(counter<0){
          clearInterval(x);
         }
@@ -38,9 +39,10 @@ const countDown=()=>{
 };
 
 //runs count func within 1 sec
-let x =setInterval(function(){
+const x =setInterval(function(){
 countDown();
 },1000);
+
     //-----------images-----------------
 const images=new Array(20);         
 //function that puts the pictures into an fixed array maybe dosent needed! 
@@ -61,7 +63,7 @@ document.querySelector('.product-img').innerHTML=htmltag;
 imgAt();
 //----------btn function------------------
 const cat_btn=()=>{
-document.querySelector(".btn-click-to-buy").innerHTML=`<button type="button" class="btn btn-primary" onclick="ShowBth()">  the sale begins now
+document.querySelector(".btn-click-to-buy").innerHTML=`<button type="button"  onclick="ShowBth()">  the sale begins now
 </button>`;
 };
 
